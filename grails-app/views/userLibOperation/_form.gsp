@@ -1,8 +1,8 @@
-<%@ page import="cn.edu.cup.userLibs.UserLibInstance" %>
+<%@ page import="cn.edu.cup.userLibs.UserLib" %>
 
 
 
-<div class="fieldcontain ${hasErrors(bean: userLibInstanceInstance, field: 'description', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: userLibInstance, field: 'description', 'error')} required">
 	<label for="description">
 		<g:message code="userLibInstance.description.label" default="Description" />
 		<span class="required-indicator">*</span>
@@ -11,7 +11,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: userLibInstanceInstance, field: 'developer', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: userLibInstance, field: 'developer', 'error')} required">
 	<label for="developer">
 		<g:message code="userLibInstance.developer.label" default="Developer" />
 		<span class="required-indicator">*</span>
@@ -20,7 +20,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: userLibInstanceInstance, field: 'libType', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: userLibInstance, field: 'libType', 'error')} required">
 	<label for="libType">
 		<g:message code="userLibInstance.libType.label" default="Lib Type" />
 		<span class="required-indicator">*</span>
@@ -29,7 +29,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: userLibInstanceInstance, field: 'name', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: userLibInstance, field: 'name', 'error')} required">
 	<label for="name">
 		<g:message code="userLibInstance.name.label" default="Name" />
 		<span class="required-indicator">*</span>
@@ -38,7 +38,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: userLibInstanceInstance, field: 'uploadDate', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: userLibInstance, field: 'uploadDate', 'error')} required">
 	<label for="uploadDate">
 		<g:message code="userLibInstance.uploadDate.label" default="Upload Date" />
 		<span class="required-indicator">*</span>

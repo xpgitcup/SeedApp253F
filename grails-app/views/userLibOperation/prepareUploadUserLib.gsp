@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta name="layout" content="main">
-        <g:set var="entityName" value="${message(code: 'userLibInstance.label', default: 'UserLibInstance')}" />
+        <g:set var="entityName" value="${message(code: 'userLib.label', default: 'UserLibInstance')}" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>上传用户类库</title>
     </head>
@@ -21,7 +21,7 @@
             <g:uploadForm controller="userLibOperation" action="doUploadUserLib">
                 <fieldset class="form">
                     <g:render template="form"/>
-                    <div class="fieldcontain ${hasErrors(bean: userLibInstanceInstance, field: 'developer', 'error')} required">
+                    <div class="fieldcontain ${hasErrors(bean: userLibInstance, field: 'developer', 'error')} required">
                         <label for="developer">
                             请选择一个类库文件
                             <span class="required-indicator">*</span>

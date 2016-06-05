@@ -1,5 +1,5 @@
 
-<%@ page import="cn.edu.cup.userLibs.UserLibInstance" %>
+<%@ page import="cn.edu.cup.userLibs.UserLib" %>
 <!DOCTYPE html>
 <html>
     <head>
