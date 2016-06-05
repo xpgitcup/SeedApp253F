@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="SeedApp253F dev" uuid="cd2d7df6-1669-4e1a-b68b-5f7d6de09947">
+      <user-name>sample</user-name>
+      <user-password>dfd9dfcbdfc7dfdadfc6dfcfdfeadfc9dfc2dfdfdfd3dfdfdfc4</user-password>
+      <schema-pattern>seed253c.*</schema-pattern>
+      <default-schemas>seed253c.*</default-schemas>
+    </data-source>
+  </component>
+</project>

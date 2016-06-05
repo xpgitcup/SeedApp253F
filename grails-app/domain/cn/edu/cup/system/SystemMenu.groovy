@@ -48,6 +48,8 @@ class SystemMenu {
         def q = SystemMenu.createCriteria()
         def systemMenuList;
         systemMenuList = q.list() {
+            ge('menuRight', userRight)
+            isNull('upMenuItem')
         }
         return systemMenuList
     }
