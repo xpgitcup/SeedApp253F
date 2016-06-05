@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SeedApp253F.iml" filepath="$PROJECT_DIR$/SeedApp253F.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SeedApp253F-grailsPlugins.iml" filepath="$PROJECT_DIR$/SeedApp253F-grailsPlugins.iml" />
+    </modules>
+  </component>
+</project>
