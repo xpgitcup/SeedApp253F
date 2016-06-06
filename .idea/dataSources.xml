@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2946343872">
+  <component name="DataSourceManagerImpl" format="xml" hash="1480563950">
     <data-source source="LOCAL" name="SeedApp253F dev" uuid="cd2d7df6-1669-4e1a-b68b-5f7d6de09947">
-      <driver-ref>29314a1e-5d1e-421b-87e4-59a9ddc80c59</driver-ref>
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/grails-app/conf/DataSource.groovy</remarks>

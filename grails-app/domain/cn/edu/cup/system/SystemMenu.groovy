@@ -73,7 +73,7 @@ class SystemMenu {
      *构造ul字符串
      * */
     def makeUlString(mlist, userRight, ulString) {
-        ulString.ul() {
+        ulString.ul([class:'easyui-tree']) {
             mlist.each() {e->
                 li([id: "${id}"]) {
                     span("${e.menuContext}")

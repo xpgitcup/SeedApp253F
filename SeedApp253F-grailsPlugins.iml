@@ -168,7 +168,6 @@
           <root url="jar://D:/grails/grails-2.5.3/lib/com.h2database/h2/jars/h2-1.3.176.jar!/" />
           <root url="jar://D:/grails/grails-2.5.3/lib/xalan/serializer/jars/serializer-2.7.2.jar!/" />
           <root url="jar://D:/grails/grails-2.5.3/lib/org.aspectj/aspectjrt/jars/aspectjrt-1.8.5.jar!/" />
-          <root url="jar://D:/grails/grails-2.5.3/lib/org.aspectj/aspectjweaver/jars/aspectjweaver-1.8.5.jar!/" />
           <root url="jar://D:/grails/grails-2.5.3/lib/org.springframework/spring-aspects/jars/spring-aspects-4.1.8.RELEASE.jar!/" />
           <root url="jar://D:/grails/grails-2.5.3/lib/org.apache.tomcat.embed/tomcat-embed-logging-log4j/jars/tomcat-embed-logging-log4j-7.0.50.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/liquibase/liquibase-core/2.0.5/liquibase-core-2.0.5.jar!/" />
@@ -212,6 +211,7 @@
           <root url="jar://D:/grails/grails-2.5.3/lib/org.apache.ant/ant-trax/jars/ant-trax-1.7.1.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/jexcelapi/jxl/2.6.12/jxl-2.6.12.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.29/mysql-connector-java-5.1.29.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.8.5/aspectjweaver-1.8.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
