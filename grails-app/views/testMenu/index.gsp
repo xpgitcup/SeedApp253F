@@ -21,6 +21,11 @@
                         用户类库测试
                     </g:link>
                 </li>
+                <li>
+                    <g:link class="create" action="testQuery">
+                        用户类库测试
+                    </g:link>
+                </li>
                 </ul>
             </div>
             <div id="list-systemMenu" class="content scaffold-list" role="main">
@@ -51,11 +56,27 @@
                         <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
                             <td><g:link action="show" id="${systemMenuInstance.id}">${fieldValue(bean: systemMenuInstance, field: "menuContext")}</g:link></td>
+                            <td>
+                                <g:link action="createDomainQuery" id="${systemMenuInstance.id}" controller="testMenu">
+                                    创建${fieldValue(bean: systemMenuInstance, field: "menuContext")}查询
+                                </g:link>
+                            </td>
 
+                            <!--
                             <td>
                                 <g:nativeCode object="${systemMenuInstance}" method="treeViewString" parameter="9">
                                 </g:nativeCode>
                             </td>
+                            -->
+                            <td>${fieldValue(bean: systemMenuInstance, field: "menuAction")}</td>
+
+                            <td>${fieldValue(bean: systemMenuInstance, field: "menuRight")}</td>
+
+                            <td>${fieldValue(bean: systemMenuInstance, field: "menuDescription")}</td>
+
+                            <td>${fieldValue(bean: systemMenuInstance, field: "menuOrder")}</td>
+
+                            <td>${fieldValue(bean: systemMenuInstance, field: "upMenuItem")}</td>
 
                         </tr>
                     </g:each>

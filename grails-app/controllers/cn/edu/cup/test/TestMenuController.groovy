@@ -1,11 +1,32 @@
 package cn.edu.cup.test
 
+import cn.edu.cup.query.DomainQuery
+import cn.edu.cup.query.QueryString
 import cn.edu.cup.system.SystemMenu
 import cn.edu.cup.test.TestDataA
 import cn.edu.cup.userLibs.UserLib
-import cn.edu.cup.userLibs.UserLib
+import grails.transaction.Transactional
 
+@Transactional(readOnly = true)
 class TestMenuController {
+
+    def testQuery(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        respond QueryString.list(params), model:[queryStringInstanceCount: QueryString.count()]
+    }
+
+    @Transactional
+    def createDomainQuery() {
+        println(params)
+        def o = SystemMenu.get(params.id)
+        params.clazzName = o.class.name
+        def found = DomainQuery.findByClazzName(params.clazzName)
+        if (!found) {
+            def domainQueryInstance = new DomainQuery(params)
+            domainQueryInstance.save(flush: true)
+        }
+        redirect(action: "index", controller: "domainQuery")
+    }
 
     def calculate(TestDataA a) {
         def userLib = UserLib.get(1)
