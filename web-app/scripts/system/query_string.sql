@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : sample
-Source Server Version : 50626
+Source Server         : localhost
+Source Server Version : 50620
 Source Host           : localhost:3306
 Source Database       : seed253c
 
 Target Server Type    : MYSQL
-Target Server Version : 50626
+Target Server Version : 50620
 File Encoding         : 65001
 
-Date: 2016-06-09 22:54:38
+Date: 2016-06-10 11:30:17
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,4 +32,4 @@ CREATE TABLE `query_string` (
 -- ----------------------------
 -- Records of query_string
 -- ----------------------------
-INSERT INTO `query_string` VALUES ('1', '0', '1', '测试', 'select from SystemMenu a where a.right>=5');
+INSERT INTO `query_string` VALUES ('1', '4', '1', '测试', 'from SystemMenu a where a.menuRight>=5');

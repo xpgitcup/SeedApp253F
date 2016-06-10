@@ -10,6 +10,28 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class TestMenuController {
 
+    def queryService
+
+    /*
+    * 获取针对该类的所有查询字符串的列表
+    * */
+    def testSystemMenuQuery() {
+        def queryList = queryService.getAllQueryStrings(SystemMenu)
+        model:[queryStringInstanceList: queryList, clazz: SystemMenu.class]
+    }
+
+    /*
+    * 执行查询
+    * */
+    def executeQuery() {
+        println("测试查询的执行情况：${params}")
+        def sql = QueryString.get(params.id)
+        def clazz = params.clazz
+        println("传递过来的是：${clazz}")
+        def list = SystemMenu.executeQuery(sql.sqlString)
+        model:[systemMenuInstanceList: list]
+    }
+
     def testQuery(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond QueryString.list(params), model:[queryStringInstanceCount: QueryString.count()]

@@ -23,7 +23,12 @@
                 </li>
                 <li>
                     <g:link class="create" action="testQuery">
-                        用户类库测试
+                        测试创建查询
+                    </g:link>
+                </li>
+                <li>
+                    <g:link class="create" action="testSystemMenuQuery">
+                        测试获取查询字符串
                     </g:link>
                 </li>
                 </ul>

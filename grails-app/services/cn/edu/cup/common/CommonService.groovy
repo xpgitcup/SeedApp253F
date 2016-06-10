@@ -29,7 +29,10 @@ class CommonService {
     }    
     
     /*2015.03.30
-     * 导入
+     * 导入，从数组中将对象的属性导入到对象中
+     * clazz: 类
+     * data: 数据数组，每一行是一个对象，每一列对应一个属性。
+     * params: 参数---每一列所对应的属性的索引号
      * */
     @Transactional(readOnly = false)
     def importFromArray(clazz, data, params) {
@@ -138,7 +141,12 @@ class CommonService {
         //println "ulStringBuilder: ${ulString}"
     }
     
-    //下载文件
+    /*
+    * 下载文件
+    * 参数包括：
+    * filename： 源文件的文件名
+    * 一般来说，下载后也保持这个名字
+    * */
     def download(params) {
         def filename = params.filename
         def sf = new File(filename)
@@ -166,7 +174,13 @@ class CommonService {
         }
     }
     
-    //上传文件
+    /*
+    * 上传文件
+    * 参数：
+    * uploadedFile: 需要上传的源文件，必须是上传uploadForm中的参数名
+    * destDir: 指定的目标目录，上传后将放到这个目录下
+    * 上传后的文件将保持原来的名字
+    * */
     File upload(params) {
         println "upload: ${params}"
         def uploadedFile = params.uploadedFile
