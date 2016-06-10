@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50620
 File Encoding         : 65001
 
-Date: 2016-06-10 11:30:17
+Date: 2016-06-10 11:32:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,9 +27,10 @@ CREATE TABLE `query_string` (
   PRIMARY KEY (`id`),
   KEY `FK_t2796icw8cla96tt3o00r6s5d` (`clazz_id`),
   CONSTRAINT `FK_t2796icw8cla96tt3o00r6s5d` FOREIGN KEY (`clazz_id`) REFERENCES `domain_query` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of query_string
 -- ----------------------------
 INSERT INTO `query_string` VALUES ('1', '4', '1', '测试', 'from SystemMenu a where a.menuRight>=5');
+INSERT INTO `query_string` VALUES ('2', '0', '1', '测试小于10的', 'from SystemMenu a where a.menuRight<10');
