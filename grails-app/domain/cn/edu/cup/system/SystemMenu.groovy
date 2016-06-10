@@ -47,7 +47,7 @@ class SystemMenu {
     * */
 
     static resetMenuRights(upMenu) {
-        def q = SystemMenu.createCriteria()
+        def q = createCriteria()
         def menuList
         if (upMenu) {
             menuList = q.list {
@@ -81,8 +81,8 @@ class SystemMenu {
     * 返回有权限的菜单
     * */
 
-    SystemMenu[] visibleMenuItems(userRight) {
-        def q = SystemMenu.createCriteria()
+    def visibleMenuItems(userRight) {
+        def q = createCriteria()
         def systemMenuList;
         systemMenuList = q.list() {
             ge('menuRight', userRight)
