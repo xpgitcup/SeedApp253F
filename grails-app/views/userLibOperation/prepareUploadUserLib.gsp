@@ -8,7 +8,7 @@
 
 <html>
     <head>
-        <meta name="layout" content="main">
+        <meta name="layout" content="main_0">
         <g:set var="entityName" value="${message(code: 'userLib.label', default: 'UserLibInstance')}" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>上传用户类库</title>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="main">
+        <meta name="layout" content="main_0">
         <g:set var="entityName" value="${message(code: 'userLibInstance.label', default: 'UserLibInstance')}" />
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
