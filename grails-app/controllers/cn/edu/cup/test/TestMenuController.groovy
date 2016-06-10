@@ -3,7 +3,6 @@ package cn.edu.cup.test
 import cn.edu.cup.query.DomainQuery
 import cn.edu.cup.query.QueryString
 import cn.edu.cup.system.SystemMenu
-import cn.edu.cup.test.TestDataA
 import cn.edu.cup.userLibs.UserLib
 import grails.transaction.Transactional
 
@@ -11,6 +10,16 @@ import grails.transaction.Transactional
 class TestMenuController {
 
     def queryService
+
+    /*
+    * 重置所有菜单的权限
+    * */
+
+    @Transactional
+    def resetMenuItemRights() {
+        SystemMenu.resetMenuRights(null)
+        redirect(action: "index", controller: "systemMenu")
+    }
 
     /*
     * 获取针对该类的所有查询字符串的列表

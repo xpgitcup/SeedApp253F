@@ -24,605 +24,659 @@
       <table id="15" parent="1" name="user_lib_config"/>
       <table id="16" parent="1" name="user_lib_instance"/>
       <table id="17" parent="1" name="user_method"/>
-      <column id="18" parent="2" name="id">
+      <table id="18" parent="1" name="domain_query"/>
+      <table id="19" parent="1" name="query_string"/>
+      <column id="20" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="19" parent="2" name="version">
+      <column id="21" parent="2" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="20" parent="2" name="created_at">
+      <column id="22" parent="2" name="created_at">
         <mandatory>1</mandatory>
         <data-type>datetime</data-type>
       </column>
-      <column id="21" parent="2" name="name_id">
+      <column id="23" parent="2" name="name_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="22" parent="2" name="params_string">
+      <column id="24" parent="2" name="params_string">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="23" parent="2" name="status">
+      <column id="25" parent="2" name="status">
         <mandatory>1</mandatory>
         <data-type>bit(1)</data-type>
       </column>
-      <column id="24" parent="2" name="up_task_id">
+      <column id="26" parent="2" name="up_task_id">
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="25" parent="2" name="FK_e29y16dr107g7hh7nxxyq0pvj">
+      <index id="27" parent="2" name="FK_e29y16dr107g7hh7nxxyq0pvj">
         <columns>up_task_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="26" parent="2" name="FK_sewseg7ck7uhitihr0fxwd8x9">
+      <index id="28" parent="2" name="FK_sewseg7ck7uhitihr0fxwd8x9">
         <columns>name_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="27" parent="2" name="PRIMARY">
+      <key id="29" parent="2" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="28" parent="2" name="FK_e29y16dr107g7hh7nxxyq0pvj">
+      <foreign-key id="30" parent="2" name="FK_e29y16dr107g7hh7nxxyq0pvj">
         <columns>up_task_id</columns>
         <ref-key>PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="29" parent="2" name="FK_sewseg7ck7uhitihr0fxwd8x9">
+      <foreign-key id="31" parent="2" name="FK_sewseg7ck7uhitihr0fxwd8x9">
         <columns>name_id</columns>
         <ref-key>~.stand_task.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="30" parent="3" name="id">
+      <column id="32" parent="3" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="31" parent="3" name="version">
+      <column id="33" parent="3" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="32" parent="3" name="name">
+      <column id="34" parent="3" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="33" parent="3" name="params_description">
+      <column id="35" parent="3" name="params_description">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="34" parent="3" name="PRIMARY">
+      <key id="36" parent="3" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="35" parent="4" name="id">
+      <column id="37" parent="4" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="36" parent="4" name="version">
+      <column id="38" parent="4" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="37" parent="4" name="menu_item_id">
+      <column id="39" parent="4" name="menu_item_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="38" parent="4" name="user_id">
+      <column id="40" parent="4" name="user_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="39" parent="4" name="FK_h9wqdk0kk91prbdt1g388fcmr">
+      <index id="41" parent="4" name="FK_h9wqdk0kk91prbdt1g388fcmr">
         <columns>menu_item_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="40" parent="4" name="FK_k40lo1857xnl99bba5997m0rk">
+      <index id="42" parent="4" name="FK_k40lo1857xnl99bba5997m0rk">
         <columns>user_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="41" parent="4" name="PRIMARY">
+      <key id="43" parent="4" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="42" parent="4" name="FK_h9wqdk0kk91prbdt1g388fcmr">
+      <foreign-key id="44" parent="4" name="FK_h9wqdk0kk91prbdt1g388fcmr">
         <columns>menu_item_id</columns>
         <ref-key>~.system_menu.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="43" parent="4" name="FK_k40lo1857xnl99bba5997m0rk">
+      <foreign-key id="45" parent="4" name="FK_k40lo1857xnl99bba5997m0rk">
         <columns>user_id</columns>
         <ref-key>~.system_user.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="44" parent="5" name="id">
+      <column id="46" parent="5" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="45" parent="5" name="version">
+      <column id="47" parent="5" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="46" parent="5" name="doing">
+      <column id="48" parent="5" name="doing">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="47" parent="5" name="hostip">
+      <column id="49" parent="5" name="hostip">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="48" parent="5" name="login_date">
+      <column id="50" parent="5" name="login_date">
         <mandatory>1</mandatory>
         <data-type>datetime</data-type>
       </column>
-      <column id="49" parent="5" name="session_id">
+      <column id="51" parent="5" name="session_id">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="50" parent="5" name="user_name">
+      <column id="52" parent="5" name="user_name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="51" parent="5" name="PRIMARY">
+      <key id="53" parent="5" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="52" parent="6" name="id">
+      <column id="54" parent="6" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="53" parent="6" name="version">
+      <column id="55" parent="6" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="54" parent="6" name="menu_action">
+      <column id="56" parent="6" name="menu_action">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="55" parent="6" name="menu_context">
+      <column id="57" parent="6" name="menu_context">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="56" parent="6" name="menu_description">
+      <column id="58" parent="6" name="menu_description">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="57" parent="6" name="menu_order">
+      <column id="59" parent="6" name="menu_order">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="58" parent="6" name="menu_right">
+      <column id="60" parent="6" name="menu_right">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="59" parent="6" name="up_menu_item_id">
+      <column id="61" parent="6" name="up_menu_item_id">
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="60" parent="6" name="FK_ta0xmlp775lih3ictrnyi2k5r">
+      <index id="62" parent="6" name="FK_ta0xmlp775lih3ictrnyi2k5r">
         <columns>up_menu_item_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="61" parent="6" name="PRIMARY">
+      <key id="63" parent="6" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="62" parent="6" name="FK_ta0xmlp775lih3ictrnyi2k5r">
+      <foreign-key id="64" parent="6" name="FK_ta0xmlp775lih3ictrnyi2k5r">
         <columns>up_menu_item_id</columns>
         <ref-key>PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="63" parent="7" name="id">
+      <column id="65" parent="7" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="64" parent="7" name="version">
+      <column id="66" parent="7" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="65" parent="7" name="action_name">
+      <column id="67" parent="7" name="action_name">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="66" parent="7" name="controller_name">
+      <column id="68" parent="7" name="controller_name">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="67" parent="7" name="name">
+      <column id="69" parent="7" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="68" parent="7" name="next_id">
+      <column id="70" parent="7" name="next_id">
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="69" parent="7" name="previous_id">
+      <column id="71" parent="7" name="previous_id">
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="70" parent="7" name="template_name">
+      <column id="72" parent="7" name="template_name">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="71" parent="7" name="view_name">
+      <column id="73" parent="7" name="view_name">
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="72" parent="7" name="FK_hb3wr8lfurf3r0y3qt2ku7ali">
+      <index id="74" parent="7" name="FK_hb3wr8lfurf3r0y3qt2ku7ali">
         <columns>next_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="73" parent="7" name="FK_qoihmm7f3k6inga0kwdx4631r">
+      <index id="75" parent="7" name="FK_qoihmm7f3k6inga0kwdx4631r">
         <columns>previous_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="74" parent="7" name="UK_cc35aqiqibt35f7oi6b3a7e5p">
+      <index id="76" parent="7" name="UK_cc35aqiqibt35f7oi6b3a7e5p">
         <columns>name</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="75" parent="7" name="PRIMARY">
+      <key id="77" parent="7" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <key id="76" parent="7" name="UK_cc35aqiqibt35f7oi6b3a7e5p">
+      <key id="78" parent="7" name="UK_cc35aqiqibt35f7oi6b3a7e5p">
         <columns>name</columns>
         <underlying-index>UK_cc35aqiqibt35f7oi6b3a7e5p</underlying-index>
       </key>
-      <foreign-key id="77" parent="7" name="FK_hb3wr8lfurf3r0y3qt2ku7ali">
+      <foreign-key id="79" parent="7" name="FK_hb3wr8lfurf3r0y3qt2ku7ali">
         <columns>next_id</columns>
         <ref-key>PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="78" parent="7" name="FK_qoihmm7f3k6inga0kwdx4631r">
+      <foreign-key id="80" parent="7" name="FK_qoihmm7f3k6inga0kwdx4631r">
         <columns>previous_id</columns>
         <ref-key>PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="79" parent="8" name="id">
+      <column id="81" parent="8" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="80" parent="8" name="version">
+      <column id="82" parent="8" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="81" parent="8" name="role_name">
+      <column id="83" parent="8" name="role_name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="82" parent="8" name="role_right">
+      <column id="84" parent="8" name="role_right">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="83" parent="8" name="role_right_min">
+      <column id="85" parent="8" name="role_right_min">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <index id="84" parent="8" name="UK_ivlvpwtqr9qvb91iysnk94tjl">
+      <index id="86" parent="8" name="UK_ivlvpwtqr9qvb91iysnk94tjl">
         <columns>role_name</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="85" parent="8" name="PRIMARY">
+      <key id="87" parent="8" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <key id="86" parent="8" name="UK_ivlvpwtqr9qvb91iysnk94tjl">
+      <key id="88" parent="8" name="UK_ivlvpwtqr9qvb91iysnk94tjl">
         <columns>role_name</columns>
         <underlying-index>UK_ivlvpwtqr9qvb91iysnk94tjl</underlying-index>
       </key>
-      <column id="87" parent="9" name="id">
+      <column id="89" parent="9" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="88" parent="9" name="version">
+      <column id="90" parent="9" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="89" parent="9" name="application_logo">
+      <column id="91" parent="9" name="application_logo">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="90" parent="9" name="application_title">
+      <column id="92" parent="9" name="application_title">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="91" parent="9" name="PRIMARY">
+      <key id="93" parent="9" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="92" parent="10" name="id">
+      <column id="94" parent="10" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="93" parent="10" name="version">
+      <column id="95" parent="10" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="94" parent="10" name="password">
+      <column id="96" parent="10" name="password">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="95" parent="10" name="role_id">
+      <column id="97" parent="10" name="role_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="96" parent="10" name="superior_id">
+      <column id="98" parent="10" name="superior_id">
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="97" parent="10" name="user_name">
+      <column id="99" parent="10" name="user_name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="98" parent="10" name="FK_60nlksgdtkue7cjppucmyitgh">
+      <index id="100" parent="10" name="FK_60nlksgdtkue7cjppucmyitgh">
         <columns>role_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="99" parent="10" name="FK_pqcj6q3t0dk71r1p9ujicvmd0">
+      <index id="101" parent="10" name="FK_pqcj6q3t0dk71r1p9ujicvmd0">
         <columns>superior_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="100" parent="10" name="UK_204b9ercidw1baj3s3m9lnr33">
+      <index id="102" parent="10" name="UK_204b9ercidw1baj3s3m9lnr33">
         <columns>user_name</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="101" parent="10" name="PRIMARY">
+      <key id="103" parent="10" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <key id="102" parent="10" name="UK_204b9ercidw1baj3s3m9lnr33">
+      <key id="104" parent="10" name="UK_204b9ercidw1baj3s3m9lnr33">
         <columns>user_name</columns>
         <underlying-index>UK_204b9ercidw1baj3s3m9lnr33</underlying-index>
       </key>
-      <foreign-key id="103" parent="10" name="FK_60nlksgdtkue7cjppucmyitgh">
+      <foreign-key id="105" parent="10" name="FK_60nlksgdtkue7cjppucmyitgh">
         <columns>role_id</columns>
         <ref-key>~.system_role.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="104" parent="10" name="FK_pqcj6q3t0dk71r1p9ujicvmd0">
+      <foreign-key id="106" parent="10" name="FK_pqcj6q3t0dk71r1p9ujicvmd0">
         <columns>superior_id</columns>
         <ref-key>PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="105" parent="11" name="id">
+      <column id="107" parent="11" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="106" parent="11" name="version">
+      <column id="108" parent="11" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="107" parent="11" name="dataa">
+      <column id="109" parent="11" name="dataa">
         <mandatory>1</mandatory>
         <data-type>double</data-type>
       </column>
-      <column id="108" parent="11" name="datab">
+      <column id="110" parent="11" name="datab">
         <mandatory>1</mandatory>
         <data-type>double</data-type>
       </column>
-      <key id="109" parent="11" name="PRIMARY">
+      <key id="111" parent="11" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="110" parent="12" name="id">
+      <column id="112" parent="12" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="111" parent="12" name="version">
+      <column id="113" parent="12" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="112" parent="12" name="lib_id">
+      <column id="114" parent="12" name="lib_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="113" parent="12" name="name">
+      <column id="115" parent="12" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="114" parent="12" name="FK_318feuqnwh30iyyrs3pkvo17o">
+      <index id="116" parent="12" name="FK_318feuqnwh30iyyrs3pkvo17o">
         <columns>lib_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="115" parent="12" name="PRIMARY">
+      <key id="117" parent="12" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="116" parent="12" name="FK_318feuqnwh30iyyrs3pkvo17o">
+      <foreign-key id="118" parent="12" name="FK_318feuqnwh30iyyrs3pkvo17o">
         <columns>lib_id</columns>
         <ref-key>~.user_lib.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="117" parent="13" name="id">
+      <column id="119" parent="13" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="118" parent="13" name="version">
+      <column id="120" parent="13" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="119" parent="13" name="clazz_id">
+      <column id="121" parent="13" name="clazz_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="120" parent="13" name="name">
+      <column id="122" parent="13" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="121" parent="13" name="FK_3hm82q8nnmgek5vdu5acluc34">
+      <index id="123" parent="13" name="FK_3hm82q8nnmgek5vdu5acluc34">
         <columns>clazz_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="122" parent="13" name="PRIMARY">
+      <key id="124" parent="13" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="123" parent="13" name="FK_3hm82q8nnmgek5vdu5acluc34">
+      <foreign-key id="125" parent="13" name="FK_3hm82q8nnmgek5vdu5acluc34">
         <columns>clazz_id</columns>
         <ref-key>~.user_class.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="124" parent="14" name="id">
+      <column id="126" parent="14" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="125" parent="14" name="version">
+      <column id="127" parent="14" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="126" parent="14" name="description">
+      <column id="128" parent="14" name="description">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="127" parent="14" name="developer">
+      <column id="129" parent="14" name="developer">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="128" parent="14" name="file_name">
+      <column id="130" parent="14" name="file_name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="129" parent="14" name="lib_type_id">
+      <column id="131" parent="14" name="lib_type_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="130" parent="14" name="name">
+      <column id="132" parent="14" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="131" parent="14" name="upload_date">
+      <column id="133" parent="14" name="upload_date">
         <mandatory>1</mandatory>
         <data-type>datetime</data-type>
       </column>
-      <index id="132" parent="14" name="FK_f9v69ka24cr3oi2bkqhrbm2ky">
+      <index id="134" parent="14" name="FK_f9v69ka24cr3oi2bkqhrbm2ky">
         <columns>lib_type_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="133" parent="14" name="PRIMARY">
+      <key id="135" parent="14" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="134" parent="14" name="FK_f9v69ka24cr3oi2bkqhrbm2ky">
+      <foreign-key id="136" parent="14" name="FK_f9v69ka24cr3oi2bkqhrbm2ky">
         <columns>lib_type_id</columns>
         <ref-key>~.user_lib_config.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="135" parent="15" name="id">
+      <column id="137" parent="15" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="136" parent="15" name="version">
+      <column id="138" parent="15" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="137" parent="15" name="description">
+      <column id="139" parent="15" name="description">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="138" parent="15" name="name">
+      <column id="140" parent="15" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="139" parent="15" name="path">
+      <column id="141" parent="15" name="path">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="140" parent="15" name="PRIMARY">
+      <key id="142" parent="15" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="141" parent="16" name="id">
+      <column id="143" parent="16" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="142" parent="16" name="version">
+      <column id="144" parent="16" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="143" parent="16" name="description">
+      <column id="145" parent="16" name="description">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="144" parent="16" name="developer">
+      <column id="146" parent="16" name="developer">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="145" parent="16" name="file_name">
+      <column id="147" parent="16" name="file_name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="146" parent="16" name="lib_type_id">
+      <column id="148" parent="16" name="lib_type_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="147" parent="16" name="name">
+      <column id="149" parent="16" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="148" parent="16" name="upload_date">
+      <column id="150" parent="16" name="upload_date">
         <mandatory>1</mandatory>
         <data-type>datetime</data-type>
       </column>
-      <index id="149" parent="16" name="FK_g6xqg9w8cpur9qe4imqgyqwun">
+      <index id="151" parent="16" name="FK_g6xqg9w8cpur9qe4imqgyqwun">
         <columns>lib_type_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="150" parent="16" name="PRIMARY">
+      <key id="152" parent="16" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="151" parent="16" name="FK_g6xqg9w8cpur9qe4imqgyqwun">
+      <foreign-key id="153" parent="16" name="FK_g6xqg9w8cpur9qe4imqgyqwun">
         <columns>lib_type_id</columns>
         <ref-key>~.user_lib_config.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="152" parent="17" name="id">
+      <column id="154" parent="17" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="153" parent="17" name="version">
+      <column id="155" parent="17" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="154" parent="17" name="clazz_id">
+      <column id="156" parent="17" name="clazz_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="155" parent="17" name="name">
+      <column id="157" parent="17" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="156" parent="17" name="FK_cuayukbetb119vhfsyy38oskt">
+      <index id="158" parent="17" name="FK_cuayukbetb119vhfsyy38oskt">
         <columns>clazz_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="157" parent="17" name="PRIMARY">
+      <key id="159" parent="17" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="158" parent="17" name="FK_cuayukbetb119vhfsyy38oskt">
+      <foreign-key id="160" parent="17" name="FK_cuayukbetb119vhfsyy38oskt">
         <columns>clazz_id</columns>
         <ref-key>~.user_class.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="161" parent="18" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="162" parent="18" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="163" parent="18" name="clazz_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="164" parent="18" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="165" parent="19" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="166" parent="19" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="167" parent="19" name="clazz_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="168" parent="19" name="comment">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="169" parent="19" name="sql_string">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="170" parent="19" name="FK_t2796icw8cla96tt3o00r6s5d">
+        <columns>clazz_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="171" parent="19" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="172" parent="19" name="FK_t2796icw8cla96tt3o00r6s5d">
+        <columns>clazz_id</columns>
+        <ref-key>~.domain_query.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
