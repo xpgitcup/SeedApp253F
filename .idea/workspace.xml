@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="429ff55d-3212-4ade-b1a1-d46bdb59354d" name="Default" comment="初步添加了聊天机制">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/domain/cn/edu/cup/chart/ChartTopic.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/cn/edu/cup/system/SystemMenu.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/cn/edu/cup/system/SystemMenu.groovy" />
     </list>
     <ignored path="SeedApp253F.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +29,7 @@
       <file leaf-file-name="SystemMenu.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/cn/edu/cup/system/SystemMenu.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
+            <state relative-caret-position="275">
               <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
               <folding />
             </state>
@@ -933,7 +930,7 @@
       <workItem from="1465487655529" duration="66000" />
       <workItem from="1465522954023" duration="5148000" />
       <workItem from="1465541516117" duration="2650000" />
-      <workItem from="1465545067675" duration="2963000" />
+      <workItem from="1465545067675" duration="2991000" />
     </task>
     <task id="LOCAL-00001" summary="测试菜单SQL初步成功">
       <created>1465529687654</created>
@@ -949,11 +946,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465543927222</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="初步添加了聊天机制">
+      <created>1465549151281</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1465549151281</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23685000" />
+    <option name="totallyTimeSpent" value="23713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
@@ -1241,6 +1245,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3876">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1347,7 +1352,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/cn/edu/cup/system/SystemMenu.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
+        <state relative-caret-position="275">
           <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
           <folding />
         </state>
