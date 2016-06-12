@@ -96,6 +96,16 @@ environments {
 }
 
 // log4j configuration
+
+log4j = {
+    appenders {
+        file name:'file', file:"/var/logs/${grails.util.Metadata.current.'app.name'}.log"
+    }
+    root {
+        error 'file'
+    }
+}
+
 log4j.main = {
     // Example of changing the log pattern for the default console appender:
     //
